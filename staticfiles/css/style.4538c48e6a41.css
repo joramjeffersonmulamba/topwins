@@ -1,0 +1,43 @@
+/* Custom styles */
+body {
+  
+}
+.navbar {
+  background-color: #343a40; /* Background color for the navigation bar */
+}
+
+.jumbotron {
+  background: #f8f9fa;
+  padding: 2rem 1rem;
+  margin-top: 10px; /* Adjust margin-top to prevent overlap with fixed navigation bar */
+}
+
+/* Tip card styles */
+.card {
+  background-color: #f9f9f9; /* Light background color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for card transformation and box-shadow */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Enlarge the card on hover */
+  box-shadow: 0px 0px 15px 5px rgba(0, 255, 0, 0.5); /* Add green glowing border on hover */
+}
+
+.card-title, .card-text, .btn {
+  transition: color 0.3s ease; /* Smooth transition for text and button color */
+}
+
+.card .btn:hover {
+  color: #007bff; /* Change button text color to blue on hover */
+}
+
+.card:hover .card-title,
+.card:hover .card-text {
+  color: black; /* Change text color to black on hover */
+}
+
+footer {
+  background: #f8f9fa;
+  padding: 1rem 0;
+}
+

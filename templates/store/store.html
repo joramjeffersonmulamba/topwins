@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<!-- Betting Tips Section -->
+<div class="container">
+    <h2 class="my-4">Latest Betting Tips</h2>
+    <div class="row">
+        <!-- Tip Card Example -->
+         {% for product in products %}
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Match: {{product.product_name}}</h5>
+                    <p class="card-text">Analysis: {{product.analysis }}</p>
+                    <p class="card-text"><strong>Prediction:</strong> {{product.prediction }}</p>
+                    <a href="{{ product.get_url }}" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        <!-- Repeat Tip Card for more tips -->
+        <!-- Betting Tips Section -->
+<div class="container mt-5">
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <!-- Telegram Channel Link (Far Left) -->
+            <div class="col-md-6">
+                <a href="#" class="btn btn-primary btn-block">Telegram Channel</a>
+            </div>
+            <!-- Empty Column to Push Banker Tips Button to the Far Right -->
+    
+            <!-- Banker Tips Button (Far Right) -->
+            <div class="col-md-6">
+                <button class="btn btn-success btn-block float-right">Banker Tips</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!-- Main Banner -->
+<!-- Main Banner -->
+<div class="jumbotron text-center">
+    <h1 class="display-4">Welcome to TopWins.Games</h1>
+    <p class="lead">Your best source for daily betting tips and analysis.</p>
+    <hr class="my-4">
+    <p>Sign up to get personalized tips and track your betting history.</p>
+    <a class="btn btn-primary btn-lg" href="howtoplay.html" role="button">HOW TO PLAY</a>
+    <a class="btn btn-primary btn-lg" href="vip.html" role="button">
+        VIP PLAN <i class="fas fa-gem"></i>
+    </a>
+    <a class="btn btn-primary btn-lg" href="vip.html" role="button">
+        VVIP PLAN <i class="fas fa-gem"></i>
+    </a>
+</div>
+
+
+    <!-- Betting Tips Section -->
+    <div class="container">
+        <h2 class="my-4">Latest Betting Tips</h2>
+        <div class="row">
+            <!-- Tip Card Example -->
+             {% for product in products %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Match: {{product.product_name}}</h5>
+                        <p class="card-text">Analysis: {{product.analysis }}</p>
+                        <p class="card-text"><strong>Prediction:</strong> {{product.prediction }}</p>
+                        <a href="{{ product.get_url }}" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+            <!-- Repeat Tip Card for more tips -->
+            <!-- Betting Tips Section -->
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <!-- Telegram Channel Link (Far Left) -->
+                <div class="col-md-6">
+                    <a href="#" class="btn btn-primary btn-block">Telegram Channel</a>
+                </div>
+                <!-- Empty Column to Push Banker Tips Button to the Far Right -->
+        
+                <!-- Banker Tips Button (Far Right) -->
+                <div class="col-md-6">
+                    <button class="btn btn-success btn-block float-right">Banker Tips</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        </div>
+    </div>
+    <!-- VIP Plan Section -->
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-VIP">
+            <h2 class="card-title text-center">LIFETIME VIP PLAN ✅</h2>
+            <p class="card-text text-center">Gain a LIFETIME access to our sure "2 to 5 odds" daily sports predictions.</p>
+            <p class="card-text text-center">Enjoy up to 95% Accuracy on our premium plan.</p>
+            <p class="card-text text-center">Note: Subscribing to this Lifetime plan grants you access to our VIP for life, No monthly renewals, just a one-time payment.</p>
+            <a href="#" class="btn btn-primary btn-block">VIP RESULTS</a>
+            <!-- You can add more content here if needed -->
+        </div>
+    </div>
+</div>
+
+<!-- Match Preview and Top Scorers Section -->
+<div class="container mt-5">
+    <div class="row">
+        <!-- Match Preview Column -->
+        <div class="col-md-6">
+            <h2 class="text-center mb-4">Match Preview</h2>
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action">Dortmund vs Real Madrid Match Prediction and Preview - 01/06/2024</a>
+                <a href="#" class="list-group-item list-group-item-action">Sirius vs Norrkoping Match Prediction and Preview - 01/06/2024</a>
+                <a href="#" class="list-group-item list-group-item-action">Goteborg vs Elfsborg Match Prediction and Preview - 01/06/2024</a>
+            </div>
+            <p class="text-center mt-3"><a href="#" class="btn btn-primary">More Preview »»</a></p>
+        </div>
+        <!-- Top Scorers Column -->
+        <div class="col-md-6">
+            <h2 class="text-center mb-4">Top Scorers Table</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>PLAYER</th>
+                        <th>MATCHES</th>
+                        <th>GOALS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>E. Haaland</td>
+                        <td>31</td>
+                        <td>27</td>
+                    </tr>
+                    <!-- Add more rows for other top scorers -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- Other Predictions Section -->
+<div class="container-fluid bg-light mt-5 py-4">
+    <div class="container">
+        <h2 class="text-center mb-4">Other Predictions</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <button class="btn btn-secondary btn-block btn-lg mb-3">Banker Tips</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-secondary btn-block btn-lg mb-3">Double Chance</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-secondary btn-block btn-lg mb-3">Over 1.5 Goals</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-secondary btn-block btn-lg mb-3">Over 2.5 Goals</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-secondary btn-block btn-lg mb-3">BTTS/GG</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-secondary btn-block btn-lg mb-3">Draw No Bet</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-secondary btn-block btn-lg mb-3">Draws</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-secondary btn-block btn-lg mb-3">Handicap</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Brands Section -->
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Brands we've worked with</h2>
+    <div class="row">
+        <div class="col-md-3">
+            <img src="brand1.png" class="img-fluid" alt="Brand 1">
+        </div>
+        <div class="col-md-3">
+            <img src="brand2.png" class="img-fluid" alt="Brand 2">
+        </div>
+        <div class="col-md-3">
+            <img src="brand3.png" class="img-fluid" alt="Brand 3">
+        </div>
+        <div class="col-md-3">
+            <img src="brand4.png" class="img-fluid" alt="Brand 4">
+        </div>
+    </div>
+</div>
+
+<!-- About Us Section -->
+<div class="container mt-5">
+    <h2 class="text-center mb-4">About Us</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Why Choose Us?</h3>
+            <p>We are dedicated to providing the best betting tips...</p>
+            <p>Our team of experts meticulously analyzes...</p>
+        </div>
+        <div class="col-md-6">
+            <h3>How We Do It</h3>
+            <p>Our approach is based on advanced algorithms...</p>
+            <p>We use cutting-edge technology...</p>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <h3>User Caution</h3>
+            <p>It's important to be cautious of fraudulent betting sites...</p>
+            <p>Always verify the authenticity...</p>
+        </div>
+        <div class="col-md-6">
+            <h3>What Makes Us Different</h3>
+            <p>We prioritize transparency and reliability...</p>
+            <p>Our track record speaks for itself...</p>
+        </div>
+    </div>
+</div>
+
+
+
+   
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+ {% endblock %}

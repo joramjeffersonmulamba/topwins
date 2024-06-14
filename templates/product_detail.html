@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betting Tip Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .betting-details {
+            margin-top: 30px;
+        }
+        .betting-details .card {
+            margin-bottom: 20px;
+        }
+        .betting-options .card {
+            border: none;
+            margin-bottom: 20px;
+        }
+        .betting-options .btn {
+            margin-bottom: 10px;
+        }
+        .analysis {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container betting-details">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title text-center">Match: {{ single_product.product_name }}</h2>
+            <p class="card-text text-center"><strong>Prediction:</strong> {{ single_product.prediction }}</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title">Detailed Analysis</h3>
+            <p class="card-text analysis">{{ single_product.description }}</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title">Where to Bet</h3>
+            <div class="betting-options">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Bet365</h5>
+                                <p class="card-text">Best odds for this match.</p>
+                                <a href="https://www.bet365.com" class="btn btn-primary" target="_blank">Bet Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Betway</h5>
+                                <p class="card-text">Special promotions available.</p>
+                                <a href="https://www.betway.com" class="btn btn-primary" target="_blank">Bet Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">1xBet</h5>
+                                <p class="card-text">High bonuses for new users.</p>
+                                <a href="https://www.1xbet.com" class="btn btn-primary" target="_blank">Bet Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
